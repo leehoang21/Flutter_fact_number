@@ -23,8 +23,4 @@ class HiveConfig {
     mathBox = await hive.openBox(HiveBoxName.mathBox);
     yearBox = await hive.openBox(HiveBoxName.yearBox);
   }
-
-  Future<void> dispose() async {
-    await hive.close();
-  }
 }

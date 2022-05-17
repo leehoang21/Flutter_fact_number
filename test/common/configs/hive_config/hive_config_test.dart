@@ -33,11 +33,4 @@ void main() {
       hive.openBox(HiveBoxName.yearBox),
     ]);
   });
-
-  test('dispose hive config success', () async {
-    //act
-    await hiveConfig.dispose();
-    //assert
-    verify(hive.close()).called(1);
-  });
 }

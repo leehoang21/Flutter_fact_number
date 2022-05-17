@@ -12,7 +12,7 @@ import 'journeys/splash/splash_screen.dart';
 
 class Routes {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
-    final NumberType? argument = settings.arguments as NumberType?;
+    final NumberType? numberType = settings.arguments as NumberType?;
 
     switch (settings.name) {
       case RouteList.splashScreen:
@@ -27,7 +27,7 @@ class Routes {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => Injector.getIt.get<HomeCubit>(),
-            child: Home(numberType: argument),
+            child: Home(numberType: numberType),
           ),
         );
       default:
